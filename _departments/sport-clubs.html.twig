@@ -3,18 +3,63 @@
 {% set department = 'Sport Clubs' %}
 
 {% block reportBody %}
-    <div class="row">
-        <div class="col-md-4">
-            <span>27</span>
-            <span>Number of Sport Clubs</span>
+    {% set topRowStats = [
+        { 'value': 27, 'description': '
+            Number of
+            Sport Clubs
+        ' },
+        { 'value': 31, 'description': '
+            Number of
+            Student Employees
+        ' },
+        { 'value': 710, 'description': '
+            Number of students
+            in Sport Clubs
+        ' },
+    ] %}
+    <div class="row mb-5">
+        {% for stat in topRowStats %}
+            <div class="col-md-6 col-lg-4 {% if loop.last %}offset-md-3 offset-lg-0{% endif %}">
+                <div class="d-flex flex-row statistic">
+                    <span class="statistic__value pr-3">{{ stat.value }}</span>
+                    <span class="statistic__description">
+                        {{- stat.description -}}
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6 mb-5 mb-lg-0">
+            <h3>Sports-a-Palooza</h3>
+
+            <div class="d-flex flex-row statistic">
+                <span class="statistic__value pr-3">2,000+</span>
+                <span class="statistic__description">
+                    Number of student
+                    attendees
+                </span>
+            </div>
         </div>
-        <div class="col-md-4">
-            <span>31</span>
-            <span>Number of Student Employees</span>
+        <div class="col-md-6">
+            <h3>Volunteers</h3>
+
+            <ul>
+                <li>100 - 60 coaches and team volunteers</li>
+                <li>6 Matador Sports Network Volunteers</li>
+                <li>32 Sport Club Council Volunteers</li>
+            </ul>
         </div>
-        <div class="col-md-4">
-            <span>710</span>
-            <span>Number of students in Sport Clubs</span>
-        </div>
+    </div>
+
+    <div>
+        <h3>Accomplishments</h3>
+        {% markdown %}
+            - Ice Hockey won the West Coast Hockey Conference Championship, becoming the first CA team to do so. They also went to the ACHA D2 West regionals and finished 11th in the West Region.
+            - Men’s Volleyball won the Southern California Collegiate Volleyball League Division 3 Championship.
+            - Salsa Libre took 1st place in the College Salsa Congress, also won 1st place in College Salsa Open.
+            - Sport Club Council put on the first ever “Big Game” which showcased Women’s and Men’s Rugby on their Senior games (last home game of the season), featuring performances from Fasmode and CSUN Hip Hop. The event drew over 500 spectators.
+        {% endmarkdown %}
     </div>
 {% endblock %}

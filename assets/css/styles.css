@@ -1,0 +1,39 @@
+body {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.department {
+
+}
+
+.department--sport_clubs {
+    background-image: url('../images/background--sport_clubs.jpg');
+}
+
+.annual-report {
+
+}
+
+.annual-report__header h2 {
+    font-size: 3rem;
+}
+
+.statistic {
+
+}
+
+.statistic__value {
+    font-size: 5rem;
+}
+
+.statistic__description {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2rem;
+    white-space: pre-line;
+}
