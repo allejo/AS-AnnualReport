@@ -1,0 +1,2 @@
+assets/photoshop/* filter=lfs diff=lfs merge=lfs -text
+assets/originals/* filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,20 @@
+<section class="page-section department--{{ department | lower | replace({' ': ''}) }}">
+    <div class="container">
+        <article class="annual-report">
+            <header class="annual-report__header">
+                <h2>{{ department }}</h2>
+            </header>
+
+            <div class="annual-report__body">
+                {% block reportBody %}{% endblock %}
+            </div>
+
+            {% set footer = block('footer') %}
+            {% if footer is not empty %}
+                <footer class="annual-report__footer">
+                    {{ footer | raw }}
+                </footer>
+            {% endif %}
+        </article>
+    </div>
+</section>
