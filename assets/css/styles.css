@@ -37,3 +37,11 @@ h4, h5, h6 {
     font-size: 1.2rem;
     white-space: pre-line;
 }
+
+.f-serif {
+    font-family: 'Roboto Slab', serif;
+}
+
+.t-3 {
+    font-size: 1.2rem;
+}
