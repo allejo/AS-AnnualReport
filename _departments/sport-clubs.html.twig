@@ -20,9 +20,9 @@
     <div class="row mb-5">
         {% for stat in topRowStats %}
             <div class="col-md-6 col-lg-4 {% if loop.last %}offset-md-3 offset-lg-0{% endif %}">
-                <div class="d-flex flex-row statistic">
-                    <span class="statistic__value pr-3">{{ stat.value }}</span>
-                    <span class="statistic__description">
+                <div class="d-flex flex-row">
+                    <span class="t-5 pr-3">{{ stat.value }}</span>
+                    <span class="f-serif t-1 u-line-break">
                         {{- stat.description -}}
                     </span>
                 </div>
@@ -31,21 +31,21 @@
     </div>
 
     <div class="row mb-5">
-        <div class="col-md-6 mb-5 mb-lg-0">
-            <h3>Sports-a-Palooza</h3>
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <h3 class="t-2">Sports-a-Palooza</h3>
 
-            <div class="d-flex flex-row statistic">
-                <span class="statistic__value pr-3">2,000+</span>
-                <span class="statistic__description">
+            <div class="d-flex flex-row">
+                <span class="t-5 pr-3">2,000+</span>
+                <span class="f-serif t-1 u-line-break">
                     Number of student
                     attendees
                 </span>
             </div>
         </div>
-        <div class="col-md-6">
-            <h3>Volunteers</h3>
+        <div class="col-lg-6">
+            <h3 class="t-2">Volunteers</h3>
 
-            <ul class="f-serif t-3">
+            <ul class="f-serif t-1">
                 <li>100 - 60 coaches and team volunteers</li>
                 <li>6 Matador Sports Network Volunteers</li>
                 <li>32 Sport Club Council Volunteers</li>
@@ -54,7 +54,7 @@
     </div>
 
     <div>
-        <h3>Accomplishments</h3>
+        <h3 class="t-2">Accomplishments</h3>
         {% markdown %}
             - Ice Hockey won the West Coast Hockey Conference Championship, becoming the first CA team to do so. They also went to the ACHA D2 West regionals and finished 11th in the West Region.
             - Men’s Volleyball won the Southern California Collegiate Volleyball League Division 3 Championship.
