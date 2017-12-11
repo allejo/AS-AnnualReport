@@ -1,0 +1,92 @@
+{% extends '_layouts/department-section.html.twig' %}
+
+{% set department = 'Sustainability and Recycling' %}
+
+{% block reportBody %}
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="d-flex flex-row justify-content-center">
+                <span class="t-5 pr-3">12</span>
+                <span class="f-serif t-1 u-line-break">
+                    Number of
+                    Volunteers
+                </span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex flex-row justify-content-center">
+                <span class="t-5 pr-3">19</span>
+                <span class="f-serif t-1 u-line-break">
+                    Number of
+                    Student Employees
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h3 class="t-3 mb-4">Events</h3>
+            <ul>
+                <li>America Recycles Day</li>
+                <li>RecycleMania</li>
+                <li>EarthFair</li>
+                <li>Movie Nights</li>
+                <li>New Student Orientation</li>
+                <li>Residential Life Orientation</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h3 class="t-3 mb-4">Accomplishments</h3>
+            <p>Exceptional Sustainable Materials Management program through recycling & resource recovery provided to the CSUN campus community; education and outreach to our students, staff, and faculty; Sustainable Office Program (collaborating across campus divisions and departments)</p>
+        </div>
+    </div>
+
+    {% set topRowStats = [
+        { value: 65617, description: 'Paper' },
+        { value: 162195, description: 'Cardboard' },
+        { value: 36850, description: 'Pallets' },
+    ] %}
+    <h3 class="t-3 mb-4">Recyclables</h3>
+    <div class="row mb-4 text-md-center">
+        {% for stat in topRowStats %}
+            <div class="col-md-6 col-lg-4 {% if loop.last %}offset-md-3 offset-lg-0{% endif %}">
+                <p class="f-serif t-2 mb-0">{{ stat.description }}</p>
+                <span class="t-4">{{ stat.value | number_format }}</span>
+                <span class="t-1 f-serif">lbs</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% set bottlesAndCans = [
+        { value: 623, description: 'Cans' },
+        { value: 20672, description: 'Glass' },
+        { value: 10074, description: 'Plastic #1' },
+        { value: 955, description: 'Plastic #2' },
+    ] %}
+    <h3 class="t-3 mb-4">Bottles &amp; Can</h3>
+    <div class="row mb-2 text-sm-center">
+        {% for stat in bottlesAndCans %}
+            <div class="col-sm-6 col-lg-3 mb-3">
+                <p class="f-serif t-2 mb-0">{{ stat.description }}</p>
+                <span class="t-4">{{ stat.value | number_format }}</span>
+                <span class="t-1 f-serif">lbs</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h3 class="t-3 mb-4">E-waste</h3>
+    {% set cartridges = [
+        { value: 1331, description: 'Laser Toner' },
+        { value: 306, description: 'Ink Jet' },
+        { value: 2783, description: 'E-waste' }
+    ] %}
+    <div class="row mb-2 text-sm-center">
+        {% for stat in cartridges %}
+            <div class="col-sm-6 col-md-4 mb-3 {% if loop.last %}offset-sm-3 offset-md-0{% endif %}">
+                <p class="f-serif t-2 mb-0">{{ stat.description }}</p>
+                <span class="t-4">{{ stat.value | number_format }}</span>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
