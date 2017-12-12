@@ -1,8 +1,9 @@
 # Build Settings
 exclude:
-  - assets/originals
-  - assets/photoshop
+  - assets/originals/
+  - assets/photoshop/
   - data.txt
+  - .idea/
 
 pageviews:
   - _pages

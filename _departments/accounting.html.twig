@@ -1,0 +1,53 @@
+{% extends '_layouts/department-section.html.twig' %}
+
+{% set department = 'Accounting' %}
+
+{% block reportBody %}
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <div class="text-center">
+                <h3 class="t-2 mb-0">Operating Budget</h3>
+                <span class="t-5">$8,637,455</span>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="t-2 mb-3">Accomplishments</h3>
+
+            <ul class="mb-0">
+                <li>Funded the $5.7 million Sustainability Center construction project this year.</li>
+                <li>Managed to hold our heads up with multiple staffing changes with the help of new employee Lynn Umzam and temp employee Deborah Volper. Many thanks to them.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row text-center mb-5">
+        <div class="col-md-6 mb-4">
+            <h3 class="t-2">Club Accounts</h3>
+
+            <p class="t-5 mb-0">280</p>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h3 class="t-2">Departments <sup>*</sup></h3>
+
+            <p class="t-5 mb-0">380</p>
+            <small><strong>*</strong> departments overall, including STAR, campus and AS related</small>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-6 col-lg-4 mb-5 mb-lg-4">
+            <h3 class="t-2">Student Travel Allocated</h3>
+            <p class="t-4 mb-0">$204,934</p>
+            <p class="t-1 mb-0">from 192 requests</p>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5 mb-lg-4">
+            <h3 class="t-2">Club Funding</h3>
+            <p class="t-4 mb-0">$151,402</p>
+            <p class="t-1 mb-0">130 requests funded</p>
+        </div>
+        <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-0 mb-5 mb-lg-4">
+            <h3 class="t-2">Scholarships and Grants</h3>
+            <p class="t-4 mb-0">$173,800</p>
+        </div>
+    </div>
+{% endblock %}
