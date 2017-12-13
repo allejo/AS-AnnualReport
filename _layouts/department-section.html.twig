@@ -1,4 +1,4 @@
-<section class="department department--{{ department | lower | replace({' ': '_'}) }} py-5">
+<section class="department department--{{ department | lower | replace({' ': '_', "'": ''}) }} py-5">
     <div class="container">
         <article class="annual-report">
             <header class="annual-report__header">
