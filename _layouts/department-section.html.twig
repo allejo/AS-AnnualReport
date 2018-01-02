@@ -1,20 +1,27 @@
-<section class="department department--{{ department | lower | replace({' ': '_', "'": ''}) }} py-5">
-    <div class="container">
-        <article class="annual-report">
-            <header class="annual-report__header">
-                <h2 class="mb-4 t-4">{{ department }}</h2>
-            </header>
+{%- set slugified_name = department | lower | replace({' ': '_', "'": ''}) -%}
+<div class="page-section">
+    <img class="page-section__image"
+         src="{{ url('assets/images/heading--' ~ slugified_name ~ '.jpg') }}"
+         alt="{{ department }}">
 
-            <div class="annual-report__body">
-                {% block reportBody %}{% endblock %}
-            </div>
+    <section class="department department--{{ slugified_name }} py-5">
+        <div class="container">
+            <article class="annual-report">
+                <header class="annual-report__header">
+                    <h2 class="mb-4 t-4">{{ department }}</h2>
+                </header>
 
-            {% set footer = block('footer') %}
-            {% if footer is not empty %}
-                <footer class="annual-report__footer">
-                    {{ footer | raw }}
-                </footer>
-            {% endif %}
-        </article>
-    </div>
-</section>
+                <div class="annual-report__body">
+                    {% block reportBody %}{% endblock %}
+                </div>
+
+                {% set footer = block('footer') %}
+                {% if footer is not empty %}
+                    <footer class="annual-report__footer">
+                        {{ footer | raw }}
+                    </footer>
+                {% endif %}
+            </article>
+        </div>
+    </section>
+</div>

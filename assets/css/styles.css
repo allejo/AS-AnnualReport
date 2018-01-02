@@ -18,8 +18,17 @@ h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
 
+.page-section {
+
+}
+
+.page-section__image {
+    display: block;
+    width: 100%;
+}
+
 .department {
-    border-top: 10px solid #9e0000;
+
 }
 
 .department--accounting {
