@@ -4,11 +4,16 @@
          src="{{ url('assets/images/heading--' ~ slugified_name ~ '.jpg') }}"
          alt="{{ department }}">
 
-    <section class="department department--{{ slugified_name }} py-5">
+    <div class="department department--{{ slugified_name }} py-5">
         <div class="container">
             <article class="annual-report">
-                <header class="annual-report__header">
+                <header class="annual-report__header mb-5">
                     <h2 class="mb-4 t-4">{{ department }}</h2>
+
+                    {% set description = block('description') %}
+                    {% if description is not empty %}
+                        {{ description | markdown }}
+                    {% endif %}
                 </header>
 
                 <div class="annual-report__body">
@@ -23,5 +28,5 @@
                 {% endif %}
             </article>
         </div>
-    </section>
+    </div>
 </div>

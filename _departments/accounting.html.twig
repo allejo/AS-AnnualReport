@@ -2,35 +2,50 @@
 
 {% set department = 'Accounting' %}
 
+{% block description %}
+Associated Students (A.S.) provides funding for special projects, events, conference travel and more. Matadors can even access funding in support of student research and other scholarly activities.
+
+- Student organizations
+- Academic costs associated with the creation of original research, performance pieces, senior projects, etc.
+- Course-related projects or activities that extend beyond those funded through the State University Fee
+- Conference travel or travel relating to leadership training
+{% endblock %}
+
 {% block reportBody %}
     <div class="row mb-5">
         <div class="col-lg-6">
-            <div class="text-center">
+            <section class="text-center">
                 <h3 class="t-2 mb-0">Operating Budget</h3>
                 <span class="t-5">$8,637,455</span>
-            </div>
+            </section>
         </div>
         <div class="col-lg-6">
-            <h3 class="t-2 mb-3">Accomplishments</h3>
+            <section>
+                <h3 class="t-2 mb-3">Accomplishments</h3>
 
-            <ul class="mb-0">
-                <li>Funded the $5.7 million Sustainability Center construction project this year.</li>
-                <li>Managed to hold our heads up with multiple staffing changes with the help of new employee Lynn Umzam and temp employee Deborah Volper. Many thanks to them.</li>
-            </ul>
+                <ul class="mb-0">
+                    <li>Funded the $5.7 million Sustainability Center construction project this year.</li>
+                    <li>Managed to hold our heads up with multiple staffing changes with the help of new employee Lynn Umzam and temp employee Deborah Volper. Many thanks to them.</li>
+                </ul>
+            </section>
         </div>
     </div>
 
     <div class="row text-center mb-5">
         <div class="col-md-6 mb-4">
-            <h3 class="t-2">Club Accounts</h3>
+            <section>
+                <h3 class="t-2">Club Accounts</h3>
 
-            <p class="t-5 mb-0">280</p>
+                <p class="t-5 mb-0">280</p>
+            </section>
         </div>
         <div class="col-md-6 mb-4">
-            <h3 class="t-2">Departments <sup>*</sup></h3>
+            <section>
+                <h3 class="t-2">Departments <sup>*</sup></h3>
 
-            <p class="t-5 mb-0">380</p>
-            <small><strong>*</strong> departments overall, including STAR, campus and AS related</small>
+                <p class="t-5 mb-0">380</p>
+                <small><strong>*</strong> departments overall, including STAR, campus and AS related</small>
+            </section>
         </div>
     </div>
 

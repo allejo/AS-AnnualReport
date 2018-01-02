@@ -1,7 +1,11 @@
 {% macro figure_horizontal(data) %}
     <div class="d-flex flex-row justify-content-center">
         <span class="t-5 pr-3">
-            {{ data.value | number_format }}
+            {% if data.value matches '/^\\d+$/' %}
+                {{ data.value | number_format }}
+            {% else %}
+                {{ data.value }}
+            {% endif %}
         </span>
         <span class="t-1 f-serif u-line-break">
             {{ data.desc | raw }}
@@ -11,7 +15,13 @@
 
 {% macro figure_stacked(data) %}
     <p class="f-serif t-2 mb-0">{{ data.desc }}</p>
-    <span class="t-4">{{ data.value | number_format }}</span>
+    <span class="t-4">
+        {% if data.value matches '/^\\d+$/' %}
+            {{ data.value | number_format }}
+        {% else %}
+            {{ data.value }}
+        {% endif %}
+    </span>
 
     {% if data.slug is defined %}
         <p class="t-1 mb-0">{{ data.slug }}</p>

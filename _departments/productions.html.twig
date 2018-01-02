@@ -3,12 +3,12 @@
 
 {% set department = 'Productions' %}
 
-{% block reportBody %}
-    {% markdown %}
-        [AS Productions](https://www.csun.edu/as/productions) provides concerts, cultural events, lectures and special events for the CSUN campus, including "Big Show." AS Productions keeps the Matador spirit alive by producing CSUN spirit events and collaborating on programming with campus clubs, academic departments and the University Student Union.
-    {% endmarkdown %}
+{% block description %}
+[AS Productions](https://www.csun.edu/as/productions) provides concerts, cultural events, lectures and special events for the CSUN campus, including "Big Show." AS Productions keeps the Matador spirit alive by producing CSUN spirit events and collaborating on programming with campus clubs, academic departments and the University Student Union.
+{% endblock %}
 
-    <article class="mb-5">
+{% block reportBody %}
+    <section class="mb-5">
         <h3 class="t-2">Events</h3>
 
         <div class="row">
@@ -25,9 +25,9 @@
                 }
             ], 'col-sm-6') }}
         </div>
-    </article>
+    </section>
 
-    <article class="mb-5">
+    <section class="mb-5">
         <h3 class="t-2">Staff</h3>
         <div class="row">
             {{ row([
@@ -43,13 +43,13 @@
                 }
             ], 'col-sm-6') }}
         </div>
-    </article>
+    </section>
 
-    <article>
+    <section>
         <h3 class="t-2">Accomplishments</h3>
 
         {% markdown %}
             - We have collaborated with about 60 different clubs, Vendors, departments and campus partners.
         {% endmarkdown %}
-    </article>
+    </section>
 {% endblock %}

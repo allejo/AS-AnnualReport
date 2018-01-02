@@ -1,65 +1,70 @@
 {% extends '_layouts/department-section.html.twig' %}
+{% from '_macros/row.html.twig' import row, figure_stacked, figure_horizontal %}
 
 {% set department = 'Sport Clubs' %}
 
+{% block description %}
+The [Sport Clubs program](https://www.csun.edu/as/sport-clubs) provides CSUN students an opportunity to participate in regionally and nationally competitive sports and recreational activities. The program is designed to allow each CSUN student a chance to participate in a sport club individually or as a member of a team.
+
+Each club is formed, developed, governed and administered by student members. Student leadership, interest and participation are essential elements of a successful sport club.
+{% endblock %}
+
 {% block reportBody %}
-    {% set topRowStats = [
-        { 'value': 27, 'description': '
-            Number of
-            Sport Clubs
-        ' },
-        { 'value': 31, 'description': '
-            Number of
-            Student Employees
-        ' },
-        { 'value': 710, 'description': '
-            Number of students
-            in Sport Clubs
-        ' },
-    ] %}
-    <div class="row mb-5">
-        {% for stat in topRowStats %}
-            <div class="col-md-6 col-lg-4 {% if loop.last %}offset-md-3 offset-lg-0{% endif %}">
-                <div class="d-flex flex-row">
-                    <span class="t-5 pr-3">{{ stat.value }}</span>
-                    <span class="f-serif t-1 u-line-break">
-                        {{- stat.description -}}
-                    </span>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+    <section class="mb-5">
+        <div class="row">
+            {{ row([
+                {
+                    value: 27,
+                    desc: 'Number of
+                    Sport Clubs'
+                },
+                {
+                    value: 31,
+                    desc: 'Number of
+                    Student Employees'
+                },
+                {
+                    value: 710,
+                    desc: 'Number of students
+                    in Sport Clubs'
+                }
+            ], 'col-md-6 col-lg-4') }}
+        </div>
+    </section>
 
-    <div class="row mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-            <h3 class="t-2">Sports-a-Palooza</h3>
+    <div class="row">
+        <div class="col-lg-6">
+            <section class="mb-5">
+                <h3 class="t-2">Sports-a-Palooza</h3>
 
-            <div class="d-flex flex-row">
-                <span class="t-5 pr-3">2,000+</span>
-                <span class="f-serif t-1 u-line-break">
-                    Number of student
-                    attendees
-                </span>
-            </div>
+                {{ figure_horizontal({
+                    value: '2,000+',
+                    desc: 'Number of student
+                    attendees'
+                }) }}
+            </section>
         </div>
         <div class="col-lg-6">
-            <h3 class="t-2">Volunteers</h3>
+            <section class="mb-5">
+                <h3 class="t-2">Volunteers</h3>
 
-            <ul class="f-serif t-1">
-                <li>100 - 60 coaches and team volunteers</li>
-                <li>6 Matador Sports Network Volunteers</li>
-                <li>32 Sport Club Council Volunteers</li>
-            </ul>
+                <ul class="f-serif t-1">
+                    <li>100 - 60 coaches and team volunteers</li>
+                    <li>6 Matador Sports Network volunteers</li>
+                    <li>32 Sport Club Council volunteers</li>
+                </ul>
+            </section>
         </div>
     </div>
 
-    <div>
+    <section>
         <h3 class="t-2">Accomplishments</h3>
+
         {% markdown %}
             - Ice Hockey won the West Coast Hockey Conference Championship, becoming the first CA team to do so. They also went to the ACHA D2 West regionals and finished 11th in the West Region.
             - Men’s Volleyball won the Southern California Collegiate Volleyball League Division 3 Championship.
             - Salsa Libre took 1st place in the College Salsa Congress, also won 1st place in College Salsa Open.
             - Sport Club Council put on the first ever “Big Game” which showcased Women’s and Men’s Rugby on their Senior games (last home game of the season), featuring performances from Fasmode and CSUN Hip Hop. The event drew over 500 spectators.
         {% endmarkdown %}
-    </div>
+    </section>
 {% endblock %}

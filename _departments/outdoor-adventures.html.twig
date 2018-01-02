@@ -3,122 +3,14 @@
 
 {% set department = 'Outdoor Adventures' %}
 
+{% block description %}
+Since 2008, [CSUN Outdoor Adventures (OA)](https://www.csun.edu/as/outdoor-adventures) has been providing unique recreational opportunities to the CSUN community. Through our Wilderness Outings, RIDGE Rockwall, rental center, team building program, workshops and clinics, Outdoor Leadership Program, and most recently Camp Matador, we provide awe-inspiring, transformative experiences to more than 6,000 students each year.
+{% endblock %}
+
 {% block reportBody %}
     <section class="mb-5">
-        {% markdown %}
-            Since 2008, [CSUN Outdoor Adventures (OA)](https://www.csun.edu/as/outdoor-adventures) has been providing unique recreational opportunities to the CSUN community. Through our Wilderness Outings, RIDGE Rockwall, rental center, team building program, workshops and clinics, Outdoor Leadership Program, and most recently Camp Matador, we provide awe-inspiring, transformative experiences to more than 6,000 students each year.
-        {% endmarkdown %}
-    </section>
-
-    <div class="row mb-5">
-        <div class="col-md-7">
-            <h3 class="t-2">Camp Matador</h3>
-            <div class="row">
-                {{ row([
-                    {
-                        value: 98,
-                        desc: 'Attendees'
-                    },
-                    {
-                        value: 104,
-                        desc: 'Sign-ups'
-                    }
-                ], 'col-sm-6 col-md-12 col-lg-6') }}
-            </div>
-        </div>
-        <div class="col-md-5">
-            <h3 class="t-2">Outdoor Orientation</h3>
-            {{ figure_horizontal({
-                value: 20,
-                desc: 'Number of
-                Students <sup>*</sup>'
-            }) }}
-            <p class="mb-0 text-center">
-                <small><sup>*</sup> total throughout 3 trips</small>
-            </p>
-        </div>
-    </div>
-
-    <article class="mb-5">
-        <h3 class="t-2">Adventure Trips</h3>
-        <div class="row">
-            {{ row([
-                {
-                    value: 31,
-                    desc: 'Number of
-                Day Trips'
-                },
-                {
-                    value: 45,
-                    desc: 'Number of
-                Multi-day Trips'
-                }
-            ], 'col-sm-6') }}
-        </div>
-    </article>
-
-    <article class="mb-5">
-        <h3 class="t-2">Trip Leaders</h3>
-        <div class="row">
-            {{ row([
-                {
-                    value: 8,
-                    desc: 'Primary
-                    Trip Leaders'
-                },
-                {
-                    value: 12,
-                    desc: 'Secondary
-                    Trip Leaders'
-                },
-                {
-                    value: 33,
-                    desc: 'Number of
-                    Students Involved'
-                }
-            ], 'col-md-6 col-lg-4') }}
-        </div>
-    </article>
-
-    <article class="mb-5">
-        <h3 class="t-2">Leadership Workshops</h3>
-        <div class="row">
-            {{ row([
-                {
-                    value: 9,
-                    desc: 'Fall Semester'
-                },
-                {
-                    value: 6,
-                    desc: 'Spring Semester'
-                }
-            ], 'col-sm-6') }}
-        </div>
-    </article>
-
-    <article class="mb-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="t-2">Rental Center</h3>
-                {{ figure_horizontal({
-                    value: 1764,
-                    desc: 'Number of
-                    Items Rented'
-                }) }}
-            </div>
-            <div class="col-md-6">
-                <h3 class="t-2">Bike Shop</h3>
-                {{ figure_horizontal({
-                    value: 663,
-                    desc: 'Number of
-                    Bikes Repaired'
-                }) }}
-            </div>
-        </div>
-    </article>
-
-    <article class="mb-5">
         <h3 class="t-2">Staff</h3>
+
         <div class="row">
             {{ row([
                 {
@@ -138,14 +30,157 @@
                 }
             ], 'col-md-6 col-lg-4') }}
         </div>
-    </article>
+    </section>
 
-    <article>
+    <section class="mb-5">
+        <h3 class="t-2">Trip Leaders</h3>
+
+        {% markdown %}
+            All of our Wilderness Outing Instructors have over 10 days of back country training and an additional focus on technical activities to provide you with the safest, most competent wilderness experience possible. All our staff are an equal mix of trained medical practitioners, cooks, drivers, outdoor educators, and fun facilitators culminating in pretty incredible outdoor professionals.
+        {% endmarkdown %}
+
+        <div class="row">
+            {{ row([
+                {
+                    value: 8,
+                    desc: 'Primary
+                    Trip Leaders'
+                },
+                {
+                    value: 12,
+                    desc: 'Secondary
+                    Trip Leaders'
+                },
+                {
+                    value: 33,
+                    desc: 'Number of
+                    Students Involved'
+                }
+            ], 'col-md-6 col-lg-4') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Camp Matador</h3>
+
+        {% markdown %}
+            [Camp Matador](https://www.csun.edu/as/camp-matador) welcomes freshmen to Cal State Northridge by giving them an opportunity to have fun, make friends, and learn more about the Matador life here at CSUN. Camp Matador is a 4-day, 3-night orientation program that takes place in Big Bear, California. Students ride air-conditioned charter buses from CSUN’s campus to Ponderosa Pines Camp, where they stay in air-conditioned, furnished cabins with fellow campers.
+        {% endmarkdown %}
+
+        <div class="row">
+            {{ row([
+                {
+                    value: 98,
+                    desc: 'Attendees'
+                },
+                {
+                    value: 104,
+                    desc: 'Sign-ups'
+                }
+            ], 'col-sm-6 col-md-12 col-lg-6') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Outdoor Orientation</h3>
+
+        {% markdown %}
+            [Outdoor Orientation](https://www.csun.edu/as/outdoor-adventures/outdoor-orientation) offers transfer students a warm welcome into the CSUN community and provides the tools to successfully navigate the transition into Matador life. Students will explore the beautiful outdoors of California and develop lasting relationships while on a fun-filled journey of self-discovery, empowerment, and lasting memories!
+        {% endmarkdown %}
+
+        <div>
+            {{ figure_horizontal({
+                value: 20,
+                desc: 'Number of
+            Students <sup>*</sup>'
+            }) }}
+            <p class="mb-0 text-center">
+                <small><sup>*</sup> total throughout 3 trips</small>
+            </p>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Adventure Trips</h3>
+
+        {% markdown %}
+            CSUN Outdoor Adventures, located in the Student Recreation Center, gives you the opportunity to explore, learn and enjoy outdoor opportunities. Students participating in outings will learn how to recreate safely in the great outdoors and develop an understanding of natural surroundings. Outdoor Adventures hopes this will lead each student to appreciate the Earth’s natural beauty and all it has to offer.
+        {% endmarkdown %}
+
+        <div class="row">
+            {{ row([
+                {
+                    value: 31,
+                    desc: 'Number of
+                Day Trips'
+                },
+                {
+                    value: 45,
+                    desc: 'Number of
+                Multi-day Trips'
+                }
+            ], 'col-sm-6') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Leadership Workshops</h3>
+
+        {% markdown %}
+            The [Outdoor Leadership Program (OLP)](https://www.csun.edu/as/outdoor-adventures/leadership) is designed to provide the knowledge and necessary skills for individuals who are interested in working as trip instructors or guides with the CSUN Outdoor Adventures Program.
+
+            The goal of the OLP is to develop knowledgeable, highly skilled and trained wilderness guides to work as instructors and guides with the Outdoor Adventures Program. Our overall mission is to provide the CSUN community an avenue to foster an appreciation for the outdoors, while emphasizing safety, environmental awareness, minimum impact, personal exploration, group bonding, experiential education, positive interaction, and good times.
+        {% endmarkdown %}
+
+        <div class="row">
+            {{ row([
+                {
+                    value: 9,
+                    desc: 'Fall Semester'
+                },
+                {
+                    value: 6,
+                    desc: 'Spring Semester'
+                }
+            ], 'col-sm-6') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Rental Center</h3>
+
+        {% markdown %}
+            CSUN Outdoor Adventures has a large selection of outdoor equipment available for current CSUN students to rent at a low cost for a day, a weekend, or a week. Located at the Northwest entrance of the SRC, [the Rental Center](https://www.csun.edu/as/outdoor-adventures/rentals) serves as your comprehensive outdoor resource. Whether it's a family camping trip, church retreat, music festival, or mountaineering expedition, we provide top of the line outdoor equipment rentals for a number of general and technical activities
+        {% endmarkdown %}
+
+        {{ figure_horizontal({
+            value: 1764,
+            desc: 'Number of
+                    Items Rented'
+        }) }}
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Bike Shop</h3>
+
+        {% markdown %}
+            As a [bicycle shop co-op](https://www.csun.edu/as/bike-shop), we offer CSUN students, faculty, and staff affordable prices on bicycle repairs, maintenance, and parts. If you would like to learn how to repair or maintain your bike, no labor fee will be added to your total, so you'll just pay for the price of the part (if applicable). If you don't have the time or don't want to get your hands dirty, no problem!
+        {% endmarkdown %}
+
+        {{ figure_horizontal({
+            value: 663,
+            desc: 'Number of
+                    Bikes Repaired'
+        }) }}
+    </section>
+
+    <section>
         <h3 class="mb-3 t-2">Accomplishments</h3>
+
         {% markdown %}
             - Rock wall staff, for there time belaying and teaching students at the rock wall.
             - Our partnership with Student Recreation Center, Sundays camp, the RTM department and Castaic Lake
             - Our workshop with Outdoor Afro, teaching and educating the group before they went on their first outdoor trip
         {% endmarkdown %}
-    </article>
+    </section>
 {% endblock %}

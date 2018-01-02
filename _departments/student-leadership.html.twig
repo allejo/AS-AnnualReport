@@ -3,26 +3,29 @@
 
 {% set department = 'Student Leadership' %}
 
-{% block reportBody %}
-    <div class="row mb-5">
-        <div class="col-md-6">
-            {% markdown %}
-                The Student Government division of Associated Students (A.S.) represents the student body, advocates its needs and defends its interests in dealings with faculty, campus administrators and government officials.
+{% block description %}
+<div class="row mb-5">
+    <div class="col-md-6">
+        {% markdown %}
+            The [Student Government division](https://www.csun.edu/as/student-government) of Associated Students (A.S.) represents the student body, advocates its needs and defends its interests in dealings with faculty, campus administrators and government officials.
 
-                Student Government is comprised of student leaders who seek to provide the ultimate college experience and uphold the mission and vision of A.S. Student leaders encourage shared governance, student advocacy and collaboration with other campus and community entities.
-            {% endmarkdown %}
-        </div>
-        <div class="col-md-6">
-            {{ figure_horizontal({
-                value: 6102,
-                desc: 'Number of
-                Student Votes'
-            }) }}
-        </div>
+            Student Government is comprised of student leaders who seek to provide the ultimate college experience and uphold the mission and vision of A.S. Student leaders encourage shared governance, student advocacy and collaboration with other campus and community entities.
+        {% endmarkdown %}
     </div>
+    <div class="col-md-6">
+        {{ figure_horizontal({
+            value: 6102,
+            desc: 'Number of
+            Student Votes'
+        }) }}
+    </div>
+</div>
+{% endblock %}
 
-    <h3 class="t-2 mb-3">Establishment of the Student Legal Clinic</h3>
+{% block reportBody %}
     <section class="mb-5">
+        <h3 class="t-2 mb-3">Establishment of the Student Legal Clinic</h3>
+
         {% markdown %}
             The [Student Legal Support Clinic ("Clinic")](https://library.csun.edu/student-legal-clinic-FAQ) is a unique collaboration between CSUN, the Associated Students and Southwestern Law School’s Community Lawyering Clinic.  The Clinic is directed by Southwestern Professor Julia Vázquez and staffed by law students under her direct supervision.
 
@@ -30,65 +33,71 @@
         {% endmarkdown %}
     </section>
 
-    <h3 class="t-2">Student Leaders</h3>
-    <div class="row mb-5">
-        {{ row([
-            {
-                value: 22,
-                desc: 'Senators'
-            },
-            {
-                value: 13,
-                desc: 'Cabinet
-                Members'
-            },
-            {
-                value: 25,
-                desc: 'Committee
-                Members'
-            }
-        ], 'col-md-4') }}
-    </div>
-
-    <h3 class="t-2">Meetings</h3>
-    <div class="row mb-5">
-        {{ row([
-            {
-                value: 33,
-                desc: 'Number of
-                Senate Meetings'
-            },
-            {
-                value: 33,
-                desc: 'Number of
-                Finance Meetings'
-            },
-            {
-                value: 190,
-                desc: 'Number of
-                Committee Meetings'
-            }
-        ], 'col-sm-6 col-md-4') }}
-    </div>
-
-    <h3 class="t-2">Legislative Actions</h3>
-    <div class="row mb-5">
-        {{ row([
-            {
-                value: 19,
-                desc: 'Number of
-                Resolutions'
-            },
-            {
-                value: 18,
-                desc: 'Number of
-                Recommendations'
-            }
-        ], 'col-sm-6') }}
-    </div>
-
-    <h3 class="t-2 mb-3">Senate Bills</h3>
     <section class="mb-5">
+        <h3 class="t-2">Student Leaders</h3>
+        <div class="row">
+            {{ row([
+                {
+                    value: 22,
+                    desc: 'Senators'
+                },
+                {
+                    value: 13,
+                    desc: 'Cabinet
+                Members'
+                },
+                {
+                    value: 25,
+                    desc: 'Committee
+                Members'
+                }
+            ], 'col-md-4') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Meetings</h3>
+        <div class="row">
+            {{ row([
+                {
+                    value: 33,
+                    desc: 'Number of
+                Senate Meetings'
+                },
+                {
+                    value: 33,
+                    desc: 'Number of
+                Finance Meetings'
+                },
+                {
+                    value: 190,
+                    desc: 'Number of
+                Committee Meetings'
+                }
+            ], 'col-sm-6 col-md-4') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2">Legislative Actions</h3>
+        <div class="row">
+            {{ row([
+                {
+                    value: 19,
+                    desc: 'Number of
+                Resolutions'
+                },
+                {
+                    value: 18,
+                    desc: 'Number of
+                Recommendations'
+                }
+            ], 'col-sm-6') }}
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="t-2 mb-3">Senate Bills</h3>
         {% markdown %}
             - SB‐2016‐17‐001 – Resolution Supporting Proposition 55: The California Extension of the Proposition 30 Income Tax Increase Initiative.
             - SB-2015-16-015 _(Amendment)_ — Reflect Measure R2 change to Measure M.
@@ -109,8 +118,9 @@
         {% endmarkdown %}
     </section>
 
-    <h3 class="t-2 mb-3">Recommendations</h3>
     <section>
+        <h3 class="t-2 mb-3">Recommendations</h3>
+
         {% markdown %}
             #### Internal Affairs
             - Marketing of Gender Inclusive Language
