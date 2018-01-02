@@ -1,0 +1,33 @@
+{% macro figure_horizontal(data) %}
+    <div class="d-flex flex-row justify-content-center">
+        <span class="t-5 pr-3">
+            {{ data.value | number_format }}
+        </span>
+        <span class="t-1 f-serif u-line-break">
+            {{ data.desc | raw }}
+        </span>
+    </div>
+{% endmacro %}
+
+{% macro figure_stacked(data) %}
+    <p class="f-serif t-2 mb-0">{{ data.desc }}</p>
+    <span class="t-4">{{ data.value | number_format }}</span>
+
+    {% if data.slug is defined %}
+        <p class="t-1 mb-0">{{ data.slug }}</p>
+    {% endif %}
+{% endmacro %}
+
+{% macro row(data, column, stacked) %}
+    {% from _self import figure_horizontal, figure_stacked %}
+
+    {% for col in data %}
+        <div class="{{ column }}">
+            {% if stacked %}
+                {{ figure_stacked(col) }}
+            {% else %}
+                {{ figure_horizontal(col) }}
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endmacro %}
