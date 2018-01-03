@@ -5,6 +5,8 @@ permalink: /
 {% extends '_layouts/base.html.twig' %}
 
 {% block body %}
+    {% include '_sections/landing.html.twig' %}
+
     {% include '_departments/accounting.html.twig' %}
     {% include '_departments/childrens-center.html.twig' %}
     {% include '_departments/outdoor-adventures.html.twig' %}
@@ -12,4 +14,6 @@ permalink: /
     {% include '_departments/sport-clubs.html.twig' %}
     {% include '_departments/student-leadership.html.twig' %}
     {% include '_departments/campus-recycling.html.twig' %}
+
+    {% include '_sections/footer.html.twig' %}
 {% endblock %}
