@@ -1,8 +1,9 @@
 # Build Settings
+baseurl: /annual-report/2016-2017/
+
 exclude:
   - assets/originals/
   - assets/photoshop/
-  - data.txt
   - .idea/
 
 pageviews:
