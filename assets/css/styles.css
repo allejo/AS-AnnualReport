@@ -64,6 +64,10 @@ h4, h5, h6 {
     background-image: url('../images/background--student_leadership.jpg');
 }
 
+.department--ticket_office {
+    background-image: url('../images/background--ticket_office.jpg');
+}
+
 .f-serif {
     font-family: 'Roboto Slab', serif;
 }
