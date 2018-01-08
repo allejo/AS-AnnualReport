@@ -5,6 +5,7 @@ exclude:
   - assets/originals/
   - assets/photoshop/
   - .idea/
+  - README.md
 
 pageviews:
   - _pages
