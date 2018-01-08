@@ -20,12 +20,20 @@ h4, h5, h6 {
 }
 
 .page-section {
-
+    overflow: hidden;
 }
 
 .page-section__image {
     display: block;
-    width: 100%;
+    margin-left: -50%;
+    width: 200%;
+}
+
+@media (min-width: 768px) {
+    .page-section__image {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 .page-footer {
@@ -89,7 +97,13 @@ h4, h5, h6 {
 }
 
 .t-5 {
-    font-size: 5rem;
+    font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+    .t-5 {
+        font-size: 5rem;
+    }
 }
 
 .u-line-break {

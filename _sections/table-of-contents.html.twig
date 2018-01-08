@@ -19,14 +19,14 @@
         {% for department in departments %}
             {%- set slugified_name = department | lower | replace({' ': '_', "'": ''}) -%}
 
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <a href="#{{ slugified_name }}" class="u-no-underline">
                     <img src="{{ url('assets/images/department--' ~ slugified_name ~ '.png') }}"
                          alt="{{ department }}"
                          class="img-fluid"
                     >
 
-                    <p>{{ department }}</p>
+                    <p class="sr-only">{{ department }}</p>
                 </a>
             </div>
         {% endfor %}
