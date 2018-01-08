@@ -9,14 +9,22 @@ permalink: /
     {% include '_sections/davids-letter.html.twig' %}
     {% include '_sections/table-of-contents.html.twig' %}
 
-    {% include '_departments/accounting.html.twig' %}
-    {% include '_departments/childrens-center.html.twig' %}
-    {% include '_departments/outdoor-adventures.html.twig' %}
-    {% include '_departments/productions.html.twig' %}
-    {% include '_departments/sport-clubs.html.twig' %}
-    {% include '_departments/student-leadership.html.twig' %}
-    {% include '_departments/campus-recycling.html.twig' %}
-    {% include '_departments/ticket-office.html.twig' %}
+    <div class="scrollable-area">
+        {# The `#table-of-contents` ID is provided by 'table-of-contents.html.twig' #}
+        <a class="return-to-top" href="#table-of-contents" title="Return to departments list">
+            <span class="triangle-up" aria-hidden="true"></span>
+            <span class="sr-only">Return to departments list</span>
+        </a>
+
+        {% include '_departments/accounting.html.twig' %}
+        {% include '_departments/childrens-center.html.twig' %}
+        {% include '_departments/outdoor-adventures.html.twig' %}
+        {% include '_departments/productions.html.twig' %}
+        {% include '_departments/sport-clubs.html.twig' %}
+        {% include '_departments/student-leadership.html.twig' %}
+        {% include '_departments/campus-recycling.html.twig' %}
+        {% include '_departments/ticket-office.html.twig' %}
+    </div>
 
     {% include '_sections/footer.html.twig' %}
 {% endblock %}
