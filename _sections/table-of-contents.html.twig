@@ -1,0 +1,34 @@
+<div class="container mb-5">
+    <h2 class="mb-3">Meet our Departments</h2>
+
+    <p>
+        The Associated Students is the primary advocate for students at California State University, Northridge and provides excellent, meaningful programs and services designed to create and enhance a spirited, learning-focused campus environment.
+    </p>
+
+    {% set departments = [
+        'Accounting',
+        "Children's Center",
+        'Outdoor Adventures',
+        'Productions',
+        'Sport Clubs',
+        'Student Leadership',
+        'Sustainability and Recycling',
+        'Ticket Office',
+    ] %}
+    <div class="row text-center">
+        {% for department in departments %}
+            {%- set slugified_name = department | lower | replace({' ': '_', "'": ''}) -%}
+
+            <div class="col-md-3">
+                <a href="#{{ slugified_name }}" class="u-no-underline">
+                    <img src="{{ url('assets/images/department--' ~ slugified_name ~ '.png') }}"
+                         alt="{{ department }}"
+                         class="img-fluid"
+                    >
+
+                    <p>{{ department }}</p>
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+</div>

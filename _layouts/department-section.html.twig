@@ -1,5 +1,5 @@
 {%- set slugified_name = department | lower | replace({' ': '_', "'": ''}) -%}
-<div class="page-section" data-department="{{ department }}">
+<div class="page-section" id="{{ slugified_name }}" data-department="{{ department }}">
     <img class="page-section__image"
          src="{{ url('assets/images/heading--' ~ slugified_name ~ '.jpg') }}"
          alt="{{ department }}">
