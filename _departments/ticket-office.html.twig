@@ -1,0 +1,80 @@
+{% extends '_layouts/department-section.html.twig' %}
+{% from '_macros/row.html.twig' import row, figure_stacked, figure_horizontal %}
+
+{% set department = 'Ticket Office' %}
+
+{% block description %}
+The [AS Ticket Office](https://www.csun.edu/as/ticket-office) offers ticketing services for nearly all campus events, from athletics and comedy to theater, music and more. Discounted tickets to local movie theaters and theme parks are also available.
+
+In addition, the AS Ticket Office sells transit passes for Metro and the Antelope Valley Transit Authority (AVTA).
+{% endblock %}
+
+{% block reportBody %}
+    <div class="row mb-5">
+        <div class="col-md-6">
+            {{ figure_horizontal({
+                value: 64895,
+                desc: 'Number of
+                Tickets Sold <sup>*</sup>'
+            }) }}
+            <p class="text-center">
+                <small><sup>*</sup> for 346 events held on campus</small>
+            </p>
+        </div>
+        <div class="col-md-6">
+            {{ figure_horizontal({
+                value: 3987,
+                desc: 'Number of
+                Transit Passes'
+            }) }}
+        </div>
+    </div>
+
+    <section class="mb-5">
+        <h3 class="t-2 mb-3">Metro U-Pass Launch</h3>
+
+        {% markdown %}
+            Launched the [U-Pass Program](https://www.csun.edu/as/student-transportation-guide/u-pass), offering semester-long Metro bus passes at a greatly subsidized rate offering students unlimited rides to campus, work, shopping, or anywhere they choose on any of Metro's bus or rail lines. The U-Pass subsidy funding comes from Associated Students and Parking and Transportation.
+        {% endmarkdown %}
+
+        {{ figure_horizontal({
+            value: 2605,
+            desc: 'U-Passes
+            Sold'
+        }) }}
+    </section>
+
+    <section>
+        <h3 class="t-2 mb-3">Attractions</h3>
+
+        <p>The AS Ticket Office offers discounted tickets to select theme parks and movie theaters for students, faculty and staff. Most tickets must be purchased in person at the A.S. Ticket Office, which is located across Subway in the University Student Union (USU).</p>
+
+        {{ figure_horizontal({
+            value: 12022,
+            desc: 'Discounted
+            Tickets Sold'
+        }) }}
+
+        <div class="row mt-5">
+            <div class="col-md-6 mb-5 mb-md-0">
+                <section>
+                    <h4>New Attractions</h4>
+
+                    <ul>
+                        <li>Catalina Express</li>
+                        <li>Newport Whale Watching</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section>
+                    <h4>Accomplishments</h4>
+
+                    <ul>
+                        <li>Top seller for Universal Studios Halloween Horror Nights</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+{% endblock %}
