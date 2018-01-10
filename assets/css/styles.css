@@ -114,38 +114,17 @@ h4, h5, h6 {
     border-bottom: none;
 }
 
-.js .scrollable-area {
-    /*
-      Calculated from: (7px + 13px + 7px) + 40px + 40px
-        - .triangle-up[border-width]
-        - .return-to-top[top (magic number)]
-        - .return-to-top[left (magic number)]
-    */
-    margin-top: -107px;
-}
-
-.no-js .return-to-top {
-    display: none;
-}
-
 .return-to-top {
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
     border-bottom: 0;
     border-radius: 50%;
-    display: inline-block;
+    bottom: 30px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
     padding: 20px;
-
-    position: -webkit-sticky;
-    position: sticky;
-
-    /* 40px is the magic number for enough spacing from the bottom right corner of the browser */
-    top: calc(95vh - 40px);
-    left: calc(98vw - 40px);
-
-    /* 30px margin is needed for spacing when we've reached the bottom of the container */
-    margin-bottom: 30px;
-    margin-top: 30px;
+    position: fixed;
+    right: 30px;
+    transition: opacity 0.5s linear;
 }
 
 .triangle-up {
@@ -158,4 +137,9 @@ h4, h5, h6 {
     border-style: solid;
     border-width: 0 7px 13px 7px;
     border-color: transparent transparent #a90000 transparent;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s linear;
 }
