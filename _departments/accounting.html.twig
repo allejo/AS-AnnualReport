@@ -1,4 +1,5 @@
 {% extends '_layouts/department-section.html.twig' %}
+{% from _self import accountingShared %}
 
 {% set department = 'Accounting' %}
 
@@ -11,7 +12,7 @@ Associated Students (A.S.) provides funding for special projects, events, confer
 - Conference travel or travel relating to leadership training
 {% endblock %}
 
-{% block reportBody %}
+{% macro accountingShared() %}
     <div class="row">
         <div class="col-lg-6 mb-5">
             <section class="text-center">
@@ -48,6 +49,10 @@ Associated Students (A.S.) provides funding for special projects, events, confer
             </section>
         </div>
     </div>
+{% endmacro %}
+
+{% block reportBody %}
+    {{ accountingShared() }}
 
     <div class="row text-center">
         <div class="col-md-6 col-lg-4 mb-5 mb-lg-4">

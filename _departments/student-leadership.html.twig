@@ -1,4 +1,5 @@
 {% extends '_layouts/department-section.html.twig' %}
+{% from '_departments/accounting.html.twig' import accountingShared %}
 {% from '_macros/row.html.twig' import row, figure_stacked, figure_horizontal %}
 
 {% set department = 'Student Leadership' %}
@@ -32,6 +33,8 @@
             In a survey conducted by the Associated Students, immigration was identified as a top priority for CSUN students.  The Clinic will provide pro bono advice, counsel and representation to CSUN students in a variety of immigration legal services, including, but not limited to: Deferred Action for Childhood Arrivals, Adjustment of Status, Special Immigrant Juvenile Status ("SIJS"), Violence against Women Act ("VAWA"), U visa and Naturalization Services.  In addition to client representation, Southwestern Law Students will conduct community based legal workshops to meet the needs of the CSUN student community.
         {% endmarkdown %}
     </section>
+
+    {{ accountingShared() }}
 
     <section class="mb-5">
         <h3 class="t-2">Student Leaders</h3>
